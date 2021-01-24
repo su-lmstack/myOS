@@ -6,7 +6,6 @@ Label_Start:
     mov es, ax
     mov ss, ax
     mov sp, BaseOfStack
-
     mov ax, 0600h
     mov bx, 0700h
     mov cx, 0
@@ -33,6 +32,7 @@ Label_Start:
     xor dl, dl
     int 13h
     jmp $
+
 
 StartBootMessage: db "Start Boot"
 times 510 - ($ - $$) db 0
