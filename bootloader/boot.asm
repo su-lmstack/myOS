@@ -6,6 +6,7 @@ Label_Start:
     mov es, ax
     mov ss, ax
     mov sp, BaseOfStack
+
     mov ax, 0600h
     mov bx, 0700h
     mov cx, 0

@@ -1,7 +1,7 @@
 #!/bin/bash
-set e
+set -e
 base_path=/home/lmstack/study/operating_system/project/myOS
-sudo nasm ${base_path}/bootloader/boot.asm -o ${base_path}/bootloader/boot.bin 
+sudo nasm ${base_path}/$1 -o ${base_path}/bootloader/boot.bin 
 if [[ $? -ne 0 ]]; then
     echo "command: nasm"
     exit 1
